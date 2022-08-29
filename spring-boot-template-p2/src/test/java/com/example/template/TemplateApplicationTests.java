@@ -41,7 +41,7 @@ class TemplateApplicationTests {
 	}
 
 	/**
-	 * 7 min
+	 * 12 min
 	 */
 	@Test
 	public void givenMoreThan1000calls_returnException(){
