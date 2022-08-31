@@ -1,10 +1,11 @@
 package com.example.template;
 
 import org.junit.jupiter.api.Test;
-import org.junit.platform.commons.function.Try;
-import org.omg.DynamicAny.DynArrayOperations;
+
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.util.Assert;
+
+import java.util.List;
 
 @SpringBootTest
 class TemplateApplicationTests {
@@ -61,6 +62,20 @@ class TemplateApplicationTests {
 		}
 		//Assert
 
+	}
+
+
+	/**
+	 *
+	 */
+	@Test
+	public void given2Array_ReturnListIntersectionV2(){
+		//Arrange
+		ArrayOperations arrayOperations = new ArrayOperations();
+		//Act
+		List resultIntersection = arrayOperations.intersectionV2(new int[]{4, 9, 5},new int[]{9,4,9,8,4});
+		//Assert
+		Assert.notNull(resultIntersection);
 	}
 
 }
