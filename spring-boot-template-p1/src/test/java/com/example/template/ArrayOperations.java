@@ -36,6 +36,8 @@ public class ArrayOperations {
         checkConstraints2(nums2);
 
         Set<Integer> set1 = Set.of(nums1);
+        //Set<Integer> set2 = new HashSet<Integer>(Arrays.asList(nums2));
+        //Set<Integer> targetSet2 = new HashSet<Integer>(Arrays.stream(array).boxed().collect(Collectors.toList()));
         Set<Integer> set2 = Set.of(nums2);
 
         Set result = new HashSet(set1);
