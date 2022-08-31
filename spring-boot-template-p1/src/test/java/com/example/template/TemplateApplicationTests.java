@@ -73,7 +73,7 @@ class TemplateApplicationTests {
 		//Arrange
 		ArrayOperations arrayOperations = new ArrayOperations();
 		//Act
-		List resultIntersection = arrayOperations.intersectionV2(new int[]{4, 9, 5},new int[]{9,4,9,8,4});
+		List resultIntersection = arrayOperations.intersectionV2(new Integer[]{4, 9, 5},new Integer[]{9,4,9,8,4});
 		//Assert
 		Assert.notNull(resultIntersection);
 	}
