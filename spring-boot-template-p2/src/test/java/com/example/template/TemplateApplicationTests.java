@@ -22,6 +22,17 @@ class TemplateApplicationTests {
 		Assert.isTrue(result);
 	}
 
+	@Test
+	public void givenOneAvailabilityCarMakeTwoCalls_returnFalse(){
+		//Arrange
+		ParkingSystem parkingSystem = new ParkingSystem(1,1,1);
+		//Act
+		boolean result = parkingSystem.addCar(CarTypes.BIG);
+		result = parkingSystem.addCar(CarTypes.BIG);
+		//Assert
+		Assert.isTrue(!result);
+	}
+
 	/**
 	 * 7 min
 	 */
@@ -29,10 +40,12 @@ class TemplateApplicationTests {
 	public void givenMoreThan1000CapacityAvailabilityCar_returnException(){
 		//Arrange
 		ParkingSystem parkingSystem;
+
 		//Act
 		try{
 			parkingSystem = new ParkingSystem(333,333,334);
 		}
+
 		//Assert
 		catch (ParkingSystemException e){
 			Assert.isTrue(e!=null);
