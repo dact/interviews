@@ -23,7 +23,7 @@ class TemplateApplicationTests {
 		//Arrange
 		ArrayOperations arrayOperations = new ArrayOperations();
 		//Act
-		Integer[] resultIntersection = arrayOperations.intersection(new int[]{4, 9, 5},new int[]{9,4,9,8,4});
+		List<Integer> resultIntersection = arrayOperations.intersection(new int[]{4, 9, 5},new int[]{9,4,9,8,4});
 		//Assert
 		Assert.notNull(resultIntersection);
 	}
@@ -37,7 +37,7 @@ class TemplateApplicationTests {
 		ArrayOperations arrayOperations = new ArrayOperations();
 		//Act
 		try{
-			Integer[] resultIntersection = arrayOperations.intersection(new int[]{4, 9, 5},new int[1000]);
+			List<Integer> resultIntersection = arrayOperations.intersection(new int[]{4, 9, 5},new int[1000]);
 		}
 		catch(ArrayOperationsException e){
 			Assert.isTrue(true);
@@ -55,27 +55,13 @@ class TemplateApplicationTests {
 		ArrayOperations arrayOperations = new ArrayOperations();
 		//Act
 		try{
-			Integer[] resultIntersection = arrayOperations.intersection(new int[]{1001, 9, 5},new int[]{9,4,9,8,4});
+			List<Integer> resultIntersection = arrayOperations.intersection(new int[]{1001, 9, 5},new int[]{9,4,9,8,4});
 		}
 		catch(ArrayOperationsException e){
 			Assert.isTrue(true);
 		}
 		//Assert
 
-	}
-
-
-	/**
-	 *
-	 */
-	@Test
-	public void given2Array_ReturnListIntersectionV2(){
-		//Arrange
-		ArrayOperations arrayOperations = new ArrayOperations();
-		//Act
-		List resultIntersection = arrayOperations.intersectionV2(new Integer[]{4, 9, 5},new Integer[]{9,4,9,8,4});
-		//Assert
-		Assert.notNull(resultIntersection);
 	}
 
 }

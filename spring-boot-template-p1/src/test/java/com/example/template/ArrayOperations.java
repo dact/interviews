@@ -12,25 +12,7 @@ public class ArrayOperations {
 
     }
 
-    public Integer[] intersection(int[] nums1, int[] nums2) {
-
-        checkConstraints(nums1);
-        checkConstraints(nums2);
-
-        Set set1 = new HashSet<>();
-        Set set2 = new HashSet<>();
-
-        Arrays.stream(nums1).forEach(n -> set1.add(n));
-        Arrays.stream(nums2).forEach(n -> set2.add(n));
-
-        Set result = new HashSet(set1);
-        result.retainAll(set2);
-
-        Integer[] array = (Integer[]) result.stream().toArray(Integer[]::new);
-        return array;
-    }
-
-    public List<Integer> intersectionV2(Integer[] nums1, Integer[] nums2) {
+    public List<Integer> intersection(Integer[] nums1, Integer[] nums2) {
 
         checkConstraints2(nums1);
         checkConstraints2(nums2);
