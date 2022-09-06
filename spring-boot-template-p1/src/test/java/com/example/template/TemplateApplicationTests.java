@@ -23,7 +23,7 @@ class TemplateApplicationTests {
 		//Arrange
 		ArrayOperations arrayOperations = new ArrayOperations();
 		//Act
-		List<Integer> resultIntersection = arrayOperations.intersection(new int[]{4, 9, 5},new int[]{9,4,9,8,4});
+		List<Integer> resultIntersection = arrayOperations.intersection(new Integer[]{4, 9, 5},new Integer[]{9,4,9,8,4});
 		//Assert
 		Assert.notNull(resultIntersection);
 	}
@@ -37,7 +37,7 @@ class TemplateApplicationTests {
 		ArrayOperations arrayOperations = new ArrayOperations();
 		//Act
 		try{
-			List<Integer> resultIntersection = arrayOperations.intersection(new int[]{4, 9, 5},new int[1000]);
+			List<Integer> resultIntersection = arrayOperations.intersection(new Integer[]{4, 9, 5},new Integer[1000]);
 		}
 		catch(ArrayOperationsException e){
 			Assert.isTrue(true);
@@ -55,7 +55,7 @@ class TemplateApplicationTests {
 		ArrayOperations arrayOperations = new ArrayOperations();
 		//Act
 		try{
-			List<Integer> resultIntersection = arrayOperations.intersection(new int[]{1001, 9, 5},new int[]{9,4,9,8,4});
+			List<Integer> resultIntersection = arrayOperations.intersection(new Integer[]{1001, 9, 5},new Integer[]{9,4,9,8,4});
 		}
 		catch(ArrayOperationsException e){
 			Assert.isTrue(true);
