@@ -15,7 +15,7 @@ public class ParagraphAnalizer {
         validateConstrains(paragraph,bannedWords);
 
         paragraph = replaceSpecialCharactersBySpace(paragraph);
-        String[] wordArray = paragraph.split(" " );
+        String[] wordArray = paragraph.split(" ");
 
         Map<String, Integer> mapWordsCount = new HashMap<> ();
 
@@ -61,7 +61,7 @@ public class ParagraphAnalizer {
 
     public String replaceSpecialCharactersBySpace(String word){
         for (String ec:especialCharacters) {
-            word = word.replace(ec," ");
+            word = word.replace(ec,"");
         }
         return word;
     }
