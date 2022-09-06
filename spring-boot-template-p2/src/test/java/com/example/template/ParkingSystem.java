@@ -13,7 +13,7 @@ public class ParkingSystem implements IParkingSystem{
     Map<Integer, Integer> mapSlot;
 
     public ParkingSystem(int big, int medium, int small) {
-        if(big+medium+small>CAR_SLOT_CAPACITY)throw new ParkingSystemException("Slot capcity Exception exceded");
+        if(big + medium + small > CAR_SLOT_CAPACITY ) throw new ParkingSystemException("Slot capcity Exception exceded");
 
         mapSlot = new HashMap<>();
         mapSlot.put(CarTypes.BIG,big);
@@ -36,6 +36,5 @@ public class ParkingSystem implements IParkingSystem{
 
         return carAdded;
     }
-
 
 }
