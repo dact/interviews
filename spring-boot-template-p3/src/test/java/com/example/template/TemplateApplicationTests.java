@@ -25,7 +25,7 @@ class TemplateApplicationTests {
 		//Act
 		String mostCommonWord = paragraphAnalizer.mostCommonnWord(paragraph,bannedWords);
 		//Assert
-		Assert.notNull(mostCommonWord);
+		Assert.isTrue(mostCommonWord.equals("ball"));
 	}
 
 	/**
